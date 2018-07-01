@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+
+    <script lang="JavaScript">
+
+        //M.AutoInit();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let Options;
+
+            let sideNavElems = document.querySelectorAll('.sidenav');
+            let sideNavInstance = M.Sidenav.init(sideNavElems, Options);
+
+            let tabElems = document.querySelectorAll('.tabs');
+            let tabInstance = M.Tabs.init(tabElems, Options);
+        });
+
+    </script>
+
+    <!-- <nav class="nav-extended blue darken-4"> -->
+    <nav class="nav-wrapper blue darken-4">
+        <a href="#" class="brand-logo">
+            <span style="margin-left: 20px;">Baby Book App</a>
+        </span>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="colors.html">Colors</a>
+            </li>
+            <li>
+                <a href="shapes.html">Shapes</a>
+            </li>
+            <li>
+                <a href="alphabets.html">Alphabets</a>
+            </li>
+            <li>
+                <a href="numbers.html">Numbers</a>
+            </li>
+            <li>
+                <a href="words.html">Words</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab">
+                    <a class="active" href="#test1">Dashboard</a>
+                </li>
+                <li class="tab">
+                    <a href="#test2">View All Inventory</a>
+                </li>
+                <li class="tab">
+                    <a href="#test3">Search Asset</a>
+                </li>
+                <li class="tab">
+                    <a href="#test4">Manage Page</a>
+                </li>
+            </ul>
+        </div> 
+    </nav> -->
+
+    <ul class="sidenav blue lighten-5" id="mobile-nav">
+        <li class="active">
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="colors.html">Colors</a>
+        </li>
+        <li>
+            <a href="shapes.html">Shapes</a>
+        </li>
+        <li>
+            <a href="alphabets.html">Alphabets</a>
+        </li>
+        <li>
+            <a href="numbers.html">Numbers</a>
+        </li>
+        <li>
+            <a href="words.html">Words</a>
+        </li>
+    </ul>
+
+
+
+    <div class="row">
+
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image">
+                    <a href="colors.html">
+                        <img src="images/colors.jpeg">
+                    </a>
+                    <span class="card-title">
+                        <h3 style="background-color: rgba(0, 0, 0, 0.2);"> Colors </h3>
+                    </span>
+                </div>
+                <!-- <div class="card-content">
+                            Learn all the primary colors.
+                            <span class="new badge blue" data-badge-caption="Languages">3</span>
+                        </div> -->
+                <div class="card-action">
+                    <a href="colors.html">
+                        <i class="material-icons">launch</i>
+                    </a>
+                    <span class="new badge blue" data-badge-caption="Language(s)">1</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image">
+                    <a href="colors.html">
+                        <img src="images/shapes.jpeg">
+                    </a>
+                    <span class="card-title">
+                        <h3 style="background-color: rgba(0, 0, 0, 0.2);"> Shapes </h3>
+                    </span>
+                </div>
+                <!-- <div class="card-content">
+                        Learn all the primary colors.
+                        <span class="new badge blue" data-badge-caption="Languages">3</span>
+                    </div> -->
+                <div class="card-action">
+                    <a href="colors.html">
+                        <i class="material-icons">launch</i>
+                    </a>
+                    <span class="new badge blue" data-badge-caption="Language(s)">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image">
+                    <a href="colors.html">
+                        <img src="images/alphabets.jpeg">
+                    </a>
+                    <span class="card-title">
+                        <h3 style="background-color: rgba(0, 0, 0, 0.2);"> Alphabets </h3>
+                    </span>
+                </div>
+                <!-- <div class="card-content">
+                        Learn all the primary colors.
+                        <span class="new badge blue" data-badge-caption="Languages">3</span>
+                    </div> -->
+                <div class="card-action">
+                    <a href="colors.html">
+                        <i class="material-icons">launch</i>
+                    </a>
+                    <span class="new badge blue" data-badge-caption="Language(s)">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image">
+                    <a href="colors.html">
+                        <img src="images/numbers.jpeg">
+                    </a>
+                    <span class="card-title">
+                        <h3 style="background-color: rgba(0, 0, 0, 0.2);"> Numbers </h3>
+                    </span>
+                </div>
+                <!-- <div class="card-content">
+                        Learn all the primary colors.
+                        <span class="new badge blue" data-badge-caption="Languages">3</span>
+                    </div> -->
+                <div class="card-action">
+                    <a href="colors.html">
+                        <i class="material-icons">launch</i>
+                    </a>
+                    <span class="new badge blue" data-badge-caption="Language(s)">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+            <div class="card">
+                <div class="card-image">
+                    <a href="colors.html">
+                        <img src="images/words.jpeg">
+                    </a>
+                    <span class="card-title">
+                        <h3 style="background-color: rgba(0, 0, 0, 0.2);"> Words </h3>
+                    </span>
+                </div>
+                <!-- <div class="card-content">
+                        Learn all the primary colors.
+                        <span class="new badge blue" data-badge-caption="Languages">3</span>
+                    </div> -->
+                <div class="card-action">
+                    <a href="colors.html">
+                        <i class="material-icons">launch</i>
+                    </a>
+                    <span class="new badge blue" data-badge-caption="Language(s)">1</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div> -->
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+
+</html>
