@@ -38,11 +38,11 @@
             });
         });
 
-        function carouselNext(){
+        function carouselNext() {
             return carouselInstance.next();
         }
 
-        function carouselPrev(){
+        function carouselPrev() {
             return carouselInstance.prev();
         }
 
@@ -69,36 +69,36 @@
     </style> -->
 
     <div class="navbar-fixed">
-        <!-- <nav class="nav-extended blue darken-4"> -->
-        <nav class="nav-wrapper blue darken-4">
-            <a href="#" class="brand-logo">
-                <span style="margin-left: 20px;">Baby Book</a>
-            </span>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="active">
-                    <a href="colors.html">Colors</a>
-                </li>
-                <li>
-                    <a href="shapes.html">Shapes</a>
-                </li>
-                <li>
-                    <a href="alphabets.html">Alphabets</a>
-                </li>
-                <li>
-                    <a href="numbers.html">Numbers</a>
-                </li>
-                <li>
-                    <a href="words.html">Words</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- <div class="nav-content">
+        <nav class="nav-extended blue darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <span style="margin-left: 20px;">Baby Book</a>
+                </span>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="colors.html">Colors</a>
+                    </li>
+                    <li>
+                        <a href="shapes.html">Shapes</a>
+                    </li>
+                    <li>
+                        <a href="alphabets.html">Alphabets</a>
+                    </li>
+                    <li>
+                        <a href="numbers.html">Numbers</a>
+                    </li>
+                    <li>
+                        <a href="words.html">Words</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="nav-content">
             <ul class="tabs tabs-transparent">
                 <li class="tab">
                     <a class="active" href="#test1">Dashboard</a>
@@ -113,8 +113,17 @@
                     <a href="#test4">Manage Page</a>
                 </li>
             </ul>
-        </div> 
-    </nav> -->
+        </div> -->
+            <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
+            <div class="nav-wrapper blue darken-4">
+                <div class="col s12 m12 l12 xl12">
+                    <span style="margin-left: 20px;">
+                        <a href="index.html" class="breadcrumb">Home</a>
+                        <a href="#" class="breadcrumb">Colors</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <ul class="sidenav blue darken-4" id="mobile-nav">
@@ -138,11 +147,19 @@
         </li>
     </ul>
 
+
+    <div style="height:200px;"></div>
+
+
     <div class="carousel carousel-slider center no-copy">
         <div class="carousel-fixed-item center blue-grey-text text-lighten-4">
-            <div class="left" onclick="carouselPrev()"><i class="material-icons md-48">keyboard_arrow_left</i></div>
+            <div class="left" onclick="carouselPrev()">
+                <i class="material-icons md-48">keyboard_arrow_left</i>
+            </div>
             <i class="material-icons md-48">touch_app</i>
-            <div class="right" onclick="carouselNext()"><i class="material-icons md-48">keyboard_arrow_right</i></div>
+            <div class="right" onclick="carouselNext()">
+                <i class="material-icons md-48">keyboard_arrow_right</i>
+            </div>
         </div>
         <div class="carousel-item red white-text" onclick="responsiveVoice.speak('Red');" on-touch="responsiveVoice.speak('Red');">
             <h1>Red</h1>
