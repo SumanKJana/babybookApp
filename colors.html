@@ -121,12 +121,14 @@
 
         function setTranslatedWord() {
 
-            console.log('inside');
-
             let selectedLang = 'English';
 
             if (typeof (Storage) !== "undefined") {
                 selectedLang = localStorage.getItem("languageSelected");
+            }
+
+            if (null == selectedLang ||  selectedLang == "undefined") {
+                selectedLang = 'English';
             }
 
             document.getElementById("currentLang").innerText = selectedLang;
