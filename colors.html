@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body onload="setTranslatedWord()">
 
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
@@ -27,6 +27,11 @@
 
             let sideNavElems = document.querySelectorAll('.sidenav');
             let sideNavInstance = M.Sidenav.init(sideNavElems, Options);
+
+            var dropdownElems = document.querySelectorAll('.dropdown-trigger');
+            var dropdownInstances = M.Dropdown.init(dropdownElems, {
+                alignment: 'center'
+            });
 
             // let tabElems = document.querySelectorAll('.tabs');
             // let tabInstance = M.Tabs.init(tabElems, Options);
@@ -44,6 +49,99 @@
 
         function carouselPrev() {
             return carouselInstance.prev();
+        }
+
+        function selectLang(langSelected) {
+
+            //document.getElementById("currentLang").innerText = langSelected;
+
+            if (typeof (Storage) !== "undefined") {
+                // Store
+                localStorage.setItem("languageSelected", langSelected);
+            }
+
+            setTranslatedWord();
+
+        }
+
+        let dict = {
+            English: {
+                'Red': 'Red',
+                'Yellow' : 'Yellow',
+                'Blue' : 'Blue',
+                'Orange' : 'Orange',
+                'Green' : 'Green',
+                'Purple' : 'Purple',
+                'Pink' : 'Pink',
+                'Brown' : 'Brown',
+                'Black' : 'Black',
+                'White' : 'White',
+                'Grey' : 'Grey'
+            },
+            Bengali: {
+                'Red': 'লাল',
+                'Yellow' : 'হলুদ',
+                'Blue' : 'নীল',
+                'Orange' : 'কমলা',
+                'Green' : 'সবুজ',
+                'Purple' : 'বেগুনী',
+                'Pink' : 'গোলাপী',
+                'Brown' : 'বাদামী',
+                'Black' : 'কালো',
+                'White' : 'সাদা',
+                'Grey' : 'ধূসর'
+            },
+            Hindi: {
+                'Red': 'लाल',
+                'Yellow' : 'पीला',
+                'Blue' : 'नीला',
+                'Orange' : 'नारंगी',
+                'Green' : 'हरा',
+                'Purple' : 'बैंगनी',
+                'Pink' : 'गुलाबी',
+                'Brown' : 'भूरा',
+                'Black' : 'काली',
+                'White' : 'सफेद',
+                'Grey' : 'धूसर'
+            },
+            Spanish: {
+                'Red': 'Rojo',
+                'Yellow' : 'Amarillo',
+                'Blue' : 'Azul',
+                'Orange' : 'Naranja',
+                'Green' : 'Verde',
+                'Purple' : 'Púrpura',
+                'Pink' : 'Rosado',
+                'Brown' : 'marrón',
+                'Black' : 'Negro',
+                'White' : 'Blanco',
+                'Grey' : 'Gris'
+            }
+        }
+
+        function setTranslatedWord() {
+
+            console.log('inside');
+
+            let selectedLang = 'English';
+
+            if (typeof (Storage) !== "undefined") {
+                selectedLang = localStorage.getItem("languageSelected");
+            }
+
+            document.getElementById("currentLang").innerText = selectedLang;
+
+            document.getElementById("redSlide").innerText = dict[selectedLang]['Red'];
+            document.getElementById("yellowSlide").innerText = dict[selectedLang]['Yellow'];
+            document.getElementById("blueSlide").innerText = dict[selectedLang]['Blue'];
+            document.getElementById("orangeSlide").innerText = dict[selectedLang]['Orange'];
+            document.getElementById("greenSlide").innerText = dict[selectedLang]['Green'];
+            document.getElementById("purpleSlide").innerText = dict[selectedLang]['Purple'];
+            document.getElementById("pinkSlide").innerText = dict[selectedLang]['Pink'];
+            document.getElementById("brownSlide").innerText = dict[selectedLang]['Brown'];
+            document.getElementById("blackSlide").innerText = dict[selectedLang]['Black'];
+            document.getElementById("whiteSlide").innerText = dict[selectedLang]['White'];
+            document.getElementById("greySlide").innerText = dict[selectedLang]['Grey'];
         }
 
 
@@ -121,10 +219,38 @@
                         <a href="index.html" class="breadcrumb">Home</a>
                         <a href="#" class="breadcrumb">Colors</a>
                     </span>
+                    <ul class="right">
+                        <!-- Dropdown Trigger -->
+                        <li>
+                            <a class="dropdown-trigger" href="#!" data-target="languages">
+                                <span id="currentLang">English</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </div>
+
+    <!-- Dropdown Structure -->
+    <ul id="languages" class="dropdown-content">
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('English')">English</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Bengali')">Bengali</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Hindi')">Hindi</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Spanish')">Spanish</a>
+        </li>
+    </ul>
 
     <ul class="sidenav blue darken-4" id="mobile-nav">
         <li>
@@ -161,38 +287,38 @@
                 <i class="material-icons md-48">keyboard_arrow_right</i>
             </div>
         </div>
-        <div class="carousel-item red white-text" onclick="responsiveVoice.speak('Red');" on-touch="responsiveVoice.speak('Red');">
-            <h1>Red</h1>
+        <div class="carousel-item red white-text" onclick="responsiveVoice.speak('Red')" on-touch="responsiveVoice.speak('Red')">
+            <h1 id="redSlide">Red</h1>
         </div>
-        <div class="carousel-item yellow black-text" onclick="responsiveVoice.speak('Yellow');" on-touch="responsiveVoice.speak('Yellow');">
-            <h1>Yellow</h1>
+        <div class="carousel-item yellow black-text" onclick="responsiveVoice.speak('Yellow')" on-touch="responsiveVoice.speak('Yellow')">
+            <h1 id="yellowSlide">Yellow</h1>
         </div>
-        <div class="carousel-item blue white-text" onclick="responsiveVoice.speak('Blue');" on-touch="responsiveVoice.speak('Blue');">
-            <h1>Blue</h1>
+        <div class="carousel-item blue white-text" onclick="responsiveVoice.speak('Blue')" on-touch="responsiveVoice.speak('Blue')">
+            <h1 id="blueSlide">Blue</h1>
         </div>
-        <div class="carousel-item orange white-text" onclick="responsiveVoice.speak('Orange');" on-touch="responsiveVoice.speak('Orange');">
-            <h1>Orange</h1>
+        <div class="carousel-item orange white-text" onclick="responsiveVoice.speak('Orange')" on-touch="responsiveVoice.speak('Orange')">
+            <h1 id="orangeSlide">Orange</h1>
         </div>
-        <div class="carousel-item green white-text" onclick="responsiveVoice.speak('Green');" on-touch="responsiveVoice.speak('Green');">
-            <h1>Green</h1>
+        <div class="carousel-item green white-text" onclick="responsiveVoice.speak('Green')" on-touch="responsiveVoice.speak('Green')">
+            <h1 id="greenSlide">Green</h1>
         </div>
-        <div class="carousel-item purple white-text" onclick="responsiveVoice.speak('Purple');" on-touch="responsiveVoice.speak('Purple');">
-            <h1>Purple</h1>
+        <div class="carousel-item purple white-text" onclick="responsiveVoice.speak('Purple')" on-touch="responsiveVoice.speak('Purple')">
+            <h1 id="purpleSlide">Purple</h1>
         </div>
-        <div class="carousel-item pink lighten-3 white-text" onclick="responsiveVoice.speak('Pink');" on-touch="responsiveVoice.speak('Pink');">
-            <h1>Pink</h1>
+        <div class="carousel-item pink lighten-3 white-text" onclick="responsiveVoice.speak('Pink')" on-touch="responsiveVoice.speak('Pink')">
+            <h1 id="pinkSlide">Pink</h1>
         </div>
-        <div class="carousel-item brown white-text" onclick="responsiveVoice.speak('Brown');" on-touch="responsiveVoice.speak('Brown');">
-            <h1>Brown</h1>
+        <div class="carousel-item brown white-text" onclick="responsiveVoice.speak('Brown')" on-touch="responsiveVoice.speak('Brown')">
+            <h1 id="brownSlide">Brown</h1>
         </div>
-        <div class="carousel-item black white-text" onclick="responsiveVoice.speak('Black');" on-touch="responsiveVoice.speak('Black');">
-            <h1>Black</h1>
+        <div class="carousel-item black white-text" onclick="responsiveVoice.speak('Black')" on-touch="responsiveVoice.speak('Black')">
+            <h1 id="blackSlide">Black</h1>
         </div>
-        <div class="carousel-item white black-text" onclick="responsiveVoice.speak('White');" on-touch="responsiveVoice.speak('White');">
-            <h1>White</h1>
+        <div class="carousel-item white black-text" onclick="responsiveVoice.speak('White')" on-touch="responsiveVoice.speak('White')">
+            <h1 id="whiteSlide">White</h1>
         </div>
-        <div class="carousel-item grey white-text" onclick="responsiveVoice.speak('Grey');" on-touch="responsiveVoice.speak('Grey');">
-            <h1>Grey</h1>
+        <div class="carousel-item grey white-text" onclick="responsiveVoice.speak('Grey')" on-touch="responsiveVoice.speak('Grey')">
+            <h1 id="greySlide">Grey</h1>
         </div>
     </div>
 
