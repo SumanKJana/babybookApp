@@ -16,6 +16,8 @@
 
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
+    <script src='js/colorsdict.js'></script>
+
     <script lang="JavaScript">
 
         //M.AutoInit();
@@ -64,61 +66,6 @@
 
         }
 
-        let dict = {
-            English: {
-                'Red': 'Red',
-                'Yellow' : 'Yellow',
-                'Blue' : 'Blue',
-                'Orange' : 'Orange',
-                'Green' : 'Green',
-                'Purple' : 'Purple',
-                'Pink' : 'Pink',
-                'Brown' : 'Brown',
-                'Black' : 'Black',
-                'White' : 'White',
-                'Grey' : 'Grey'
-            },
-            Bengali: {
-                'Red': 'লাল',
-                'Yellow' : 'হলুদ',
-                'Blue' : 'নীল',
-                'Orange' : 'কমলা',
-                'Green' : 'সবুজ',
-                'Purple' : 'বেগুনী',
-                'Pink' : 'গোলাপী',
-                'Brown' : 'বাদামী',
-                'Black' : 'কালো',
-                'White' : 'সাদা',
-                'Grey' : 'ধূসর'
-            },
-            Hindi: {
-                'Red': 'लाल',
-                'Yellow' : 'पीला',
-                'Blue' : 'नीला',
-                'Orange' : 'नारंगी',
-                'Green' : 'हरा',
-                'Purple' : 'बैंगनी',
-                'Pink' : 'गुलाबी',
-                'Brown' : 'भूरा',
-                'Black' : 'काली',
-                'White' : 'सफेद',
-                'Grey' : 'धूसर'
-            },
-            Spanish: {
-                'Red': 'Rojo',
-                'Yellow' : 'Amarillo',
-                'Blue' : 'Azul',
-                'Orange' : 'Naranja',
-                'Green' : 'Verde',
-                'Purple' : 'Púrpura',
-                'Pink' : 'Rosado',
-                'Brown' : 'marrón',
-                'Black' : 'Negro',
-                'White' : 'Blanco',
-                'Grey' : 'Gris'
-            }
-        }
-
         function setTranslatedWord() {
 
             let selectedLang = 'English';
@@ -127,46 +74,27 @@
                 selectedLang = localStorage.getItem("languageSelected");
             }
 
-            if (null == selectedLang ||  selectedLang == "undefined") {
+            if (null == selectedLang || selectedLang == "undefined") {
                 selectedLang = 'English';
             }
 
             document.getElementById("currentLang").innerText = selectedLang;
 
-            document.getElementById("redSlide").innerText = dict[selectedLang]['Red'];
-            document.getElementById("yellowSlide").innerText = dict[selectedLang]['Yellow'];
-            document.getElementById("blueSlide").innerText = dict[selectedLang]['Blue'];
-            document.getElementById("orangeSlide").innerText = dict[selectedLang]['Orange'];
-            document.getElementById("greenSlide").innerText = dict[selectedLang]['Green'];
-            document.getElementById("purpleSlide").innerText = dict[selectedLang]['Purple'];
-            document.getElementById("pinkSlide").innerText = dict[selectedLang]['Pink'];
-            document.getElementById("brownSlide").innerText = dict[selectedLang]['Brown'];
-            document.getElementById("blackSlide").innerText = dict[selectedLang]['Black'];
-            document.getElementById("whiteSlide").innerText = dict[selectedLang]['White'];
-            document.getElementById("greySlide").innerText = dict[selectedLang]['Grey'];
+            document.getElementById("redSlide").innerText = colorsdict[selectedLang]['Red'];
+            document.getElementById("yellowSlide").innerText = colorsdict[selectedLang]['Yellow'];
+            document.getElementById("blueSlide").innerText = colorsdict[selectedLang]['Blue'];
+            document.getElementById("orangeSlide").innerText = colorsdict[selectedLang]['Orange'];
+            document.getElementById("greenSlide").innerText = colorsdict[selectedLang]['Green'];
+            document.getElementById("purpleSlide").innerText = colorsdict[selectedLang]['Purple'];
+            document.getElementById("pinkSlide").innerText = colorsdict[selectedLang]['Pink'];
+            document.getElementById("brownSlide").innerText = colorsdict[selectedLang]['Brown'];
+            document.getElementById("blackSlide").innerText = colorsdict[selectedLang]['Black'];
+            document.getElementById("whiteSlide").innerText = colorsdict[selectedLang]['White'];
+            document.getElementById("greySlide").innerText = colorsdict[selectedLang]['Grey'];
         }
 
 
     </script>
-
-
-    <!-- <style lang="css">
-        .material-icons.md-18 {
-            font-size: 18px;
-        }
-
-        .material-icons.md-24 {
-            font-size: 24px;
-        }
-
-        .material-icons.md-36 {
-            font-size: 36px;
-        }
-
-        .material-icons.md-48 {
-            font-size: 48px;
-        }
-    </style> -->
 
     <div class="navbar-fixed">
         <nav class="nav-extended blue darken-4">
@@ -198,22 +126,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab">
-                    <a class="active" href="#test1">Dashboard</a>
-                </li>
-                <li class="tab">
-                    <a href="#test2">View All Inventory</a>
-                </li>
-                <li class="tab">
-                    <a href="#test3">Search Asset</a>
-                </li>
-                <li class="tab">
-                    <a href="#test4">Manage Page</a>
-                </li>
-            </ul>
-        </div> -->
+            
             <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
             <div class="nav-wrapper blue darken-4">
                 <div class="col s12 m12 l12 xl12">
@@ -323,6 +236,14 @@
             <h1 id="greySlide">Grey</h1>
         </div>
     </div>
+
+
+
+    <div class="valign-wrapper blue-grey lighten-5">
+        <span style="width:20px;"></span><i class="material-icons">volume_up</i>&nbsp;&nbsp;
+        <em>Click or Tap on the color for audio (English Only)</em></span>
+    </div>
+
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
