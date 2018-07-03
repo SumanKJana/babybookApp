@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +14,14 @@
 
 <body>
 
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
 
     <script lang="JavaScript">
 
         //M.AutoInit();
+
+        let carouselInstance;
 
         document.addEventListener('DOMContentLoaded', function () {
             let Options;
@@ -26,57 +31,96 @@
 
             let tabElems = document.querySelectorAll('.tabs');
             let tabInstance = M.Tabs.init(tabElems, Options);
+
+            let carouselElems = document.querySelector('.carousel');
+            carouselInstance = M.Carousel.init(carouselElems, {
+                fullWidth: true,
+                indicators: true
+            });
         });
+
+        function carouselNext() {
+            return carouselInstance.next();
+        }
+
+        function carouselPrev() {
+            return carouselInstance.prev();
+        }
 
     </script>
 
-    <!-- <nav class="nav-extended blue darken-4"> -->
-    <nav class="nav-wrapper blue darken-4">
-        <a href="#" class="brand-logo">
-            <span style="margin-left: 20px;">Baby Book</a>
-        </span>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="colors.html">Colors</a>
-            </li>
-            <li class="active">
-                <a href="shapes.html">Shapes</a>
-            </li>
-            <li>
-                <a href="alphabets.html">Alphabets</a>
-            </li>
-            <li>
-                <a href="numbers.html">Numbers</a>
-            </li>
-            <li>
-                <a href="words.html">Words</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab">
-                    <a class="active" href="#test1">Dashboard</a>
-                </li>
-                <li class="tab">
-                    <a href="#test2">View All Inventory</a>
-                </li>
-                <li class="tab">
-                    <a href="#test3">Search Asset</a>
-                </li>
-                <li class="tab">
-                    <a href="#test4">Manage Page</a>
-                </li>
-            </ul>
-        </div> 
-    </nav> -->
+    <div class="navbar-fixed">
+        <nav class="nav-extended blue darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <span style="margin-left: 20px;">Baby Book</a>
+                </span>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="colors.html">Colors</a>
+                    </li>
+                    <li class="active">
+                        <a href="shapes.html">Shapes</a>
+                    </li>
+                    <li>
+                        <a href="alphabets.html">Alphabets</a>
+                    </li>
+                    <li>
+                        <a href="numbers.html">Numbers</a>
+                    </li>
+                    <li>
+                        <a href="words.html">Words</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
+            <div class="nav-wrapper blue darken-4">
+                <div class="col s12 m12 l12 xl12">
+                    <span style="margin-left: 20px;">
+                        <a href="index.html" class="breadcrumb">Home</a>
+                        <a href="#" class="breadcrumb">Shapes</a>
+                    </span>
+                    <!-- <ul class="right"> -->
+                        <!-- Dropdown Trigger -->
+                        <!--<li>
+                            <a class="dropdown-trigger" href="#!" data-target="languages">
+                                <span id="currentLang">English</span>
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Dropdown Structure -->
+    <!-- <ul id="languages" class="dropdown-content no-copy">
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('English')">English</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Bengali')">Bengali</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Hindi')">Hindi</a>
+        </li>
+        <li class="divider blue-grey"></li>
+        <li class="blue darken-4">
+            <a class="white-text" href="#!" onclick="selectLang('Spanish')">Spanish</a>
+        </li>
+    </ul> -->
+
+    <!-- Mobile or Tablet Menu -->
     <ul class="sidenav blue darken-4" id="mobile-nav">
         <li>
             <a class="white-text" href="index.html">Home</a>
@@ -97,6 +141,49 @@
             <a class="white-text" href="words.html">Words</a>
         </li>
     </ul>
+
+
+    <div style="height:60px;"></div>
+
+
+    <div class="carousel carousel-slider center no-copy">
+        <div class="carousel-fixed-item center blue-grey-text text-darken-4">
+            <div class="left" onclick="carouselPrev()">
+                <i class="material-icons md-48">keyboard_arrow_left</i>
+            </div>
+            <i class="material-icons md-48">touch_app</i>
+            <div class="right" onclick="carouselNext()">
+                <i class="material-icons md-48">keyboard_arrow_right</i>
+            </div>
+        </div>
+        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Square')" on-touch="responsiveVoice.speak('Square')">
+            <svg width="200" height="200">
+                <rect x="25" y="25" width="150" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
+            </svg>
+            <h4 id="squareSlide">Square</h4>
+        </div>
+        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Circle')" on-touch="responsiveVoice.speak('Circle')">
+            <svg height="200" width="200">
+                <circle cx="100" cy="100" r="80" stroke="darkblue" stroke-width="2" fill="cyan" /> Sorry, your browser does not support inline SVG.
+            </svg>
+            <h4 id="circleSlide">Circle</h4>
+        </div>
+        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Rectangle')" on-touch="responsiveVoice.speak('Rectangle')">
+            <svg width="400" height="200">
+                <rect x="50" y="25" width="300" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
+            </svg>
+            <h4 id="rectangleSlide">Rectangle</h4>
+        </div>
+    </div>
+
+
+
+    <div class="valign-wrapper blue-grey lighten-5">
+        <span style="width:20px;"></span>
+        <i class="material-icons">volume_up</i>&nbsp;&nbsp;
+        <em>Click or Tap on the shape for audio (English Only)</em>
+        </span>
+    </div>
 
 
 
