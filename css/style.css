@@ -1,3 +1,7 @@
+.material-icons.md-14 {
+    font-size: 14px;
+}
+
 .material-icons.md-18 {
     font-size: 18px;
 }
@@ -20,4 +24,18 @@
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */     
   }
+
+  span.reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+
+  .email-domain::before {
+    content: "\0040";    /* Unicode character for @ symbol */
+  }
+
+  .email-domain::after {
+    content: ".";    
+  }
+
   
