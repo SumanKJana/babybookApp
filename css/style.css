@@ -44,9 +44,16 @@
     list-style: none;
     padding: 0;
   }
+
+  .social-svg-icon {
+    width: 25px; 
+    height: 25px;
+    padding: 1px;
+  }
   
   ul.share-buttons li{
     display: inline;
+    padding: 1px;
   }
   
   ul.share-buttons .sr-only{
