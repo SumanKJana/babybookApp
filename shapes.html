@@ -49,199 +49,276 @@
 
     </script>
 
-    <div class="navbar-fixed">
-        <nav class="nav-extended blue darken-4">
-            <div class="nav-wrapper no-copy">
-                <a href="index.html" class="brand-logo">
-                    <span style="margin-left: 20px;"></span>
-                    <img src="images/icons/android-chrome-512x512.png" height="46px" style="vertical-align: middle;" />
-                    <span class="flow-text">&nbsp;Baby Book&nbsp;</span>
-                </a>
-                <a href="index.html" data-target="mobile-nav" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="colors.html">Colors</a>
-                    </li>
-                    <li class="active">
-                        <a href="shapes.html">Shapes</a>
-                    </li>
-                    <li>
-                        <a href="alphabets.html">Alphabets</a>
-                    </li>
-                    <li>
-                        <a href="numbers.html">Numbers</a>
-                    </li>
-                    <li>
-                        <a href="words.html">Words</a>
-                    </li>
-                </ul>
-            </div>
+    <header>
 
-            <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
-            <div class="nav-wrapper blue darken-4 no-copy">
-                <div class="col s12 m12 l12 xl12">
-                    <span style="margin-left: 20px;">
-                        <a href="index.html" class="breadcrumb">Home</a>
-                        <a href="#" class="breadcrumb">Shapes</a>
-                    </span>
-                    <!-- <ul class="right"> -->
-                    <!-- Dropdown Trigger -->
-                    <!--<li>
-                            <a class="dropdown-trigger" href="#!" data-target="languages">
-                                <span id="currentLang">English</span>
-                                <i class="material-icons right">arrow_drop_down</i>
-                            </a>
+        <div class="navbar-fixed">
+            <nav class="nav-extended blue darken-4">
+                <div class="nav-wrapper no-copy">
+                    <a href="index.html" class="brand-logo">
+                        <span style="margin-left: 20px;"></span>
+                        <img src="images/icons/android-chrome-512x512.png" height="46px" style="vertical-align: middle;" />
+                        <span class="flow-text">&nbsp;Baby Book&nbsp;</span>
+                    </a>
+                    <a href="index.html" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html">Home</a>
                         </li>
-                    </ul> -->
+                        <li>
+                            <a href="colors.html">Colors</a>
+                        </li>
+                        <li class="active">
+                            <a href="shapes.html">Shapes</a>
+                        </li>
+                        <li>
+                            <a href="alphabets.html">Alphabets</a>
+                        </li>
+                        <li>
+                            <a href="numbers.html">Numbers</a>
+                        </li>
+                        <li>
+                            <a href="words.html">Words</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
+                <div class="nav-wrapper blue darken-4 no-copy">
+                    <div class="col s12 m12 l12 xl12">
+                        <span style="margin-left: 20px;">
+                            <a href="index.html" class="breadcrumb">Home</a>
+                            <a href="#" class="breadcrumb">Shapes</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile or Tablet Menu -->
+        <ul class="sidenav blue darken-4 no-copy" id="mobile-nav">
+            <li>
+                <a class="white-text" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="white-text" href="colors.html">Colors</a>
+            </li>
+            <li class="active">
+                <a class="white-text" href="shapes.html">Shapes</a>
+            </li>
+            <li>
+                <a class="white-text" href="alphabets.html">Alphabets</a>
+            </li>
+            <li>
+                <a class="white-text" href="numbers.html">Numbers</a>
+            </li>
+            <li>
+                <a class="white-text" href="words.html">Words</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <main>
+
+        <div style="height:60px;"></div>
+
+        <div class="carousel carousel-slider center no-copy">
+            <div class="carousel-fixed-item center blue-grey-text text-darken-4">
+                <div class="left" onclick="carouselPrev()">
+                    <i class="material-icons md-48">keyboard_arrow_left</i>
+                </div>
+                <i class="material-icons md-48">touch_app</i>
+                <div class="right" onclick="carouselNext()">
+                    <i class="material-icons md-48">keyboard_arrow_right</i>
                 </div>
             </div>
-        </nav>
-    </div>
-
-    <!-- Dropdown Structure -->
-    <!-- <ul id="languages" class="dropdown-content no-copy">
-        <li class="blue darken-4">
-            <a class="white-text" href="#!" onclick="selectLang('English')">English</a>
-        </li>
-        <li class="divider blue-grey"></li>
-        <li class="blue darken-4">
-            <a class="white-text" href="#!" onclick="selectLang('Bengali')">Bengali</a>
-        </li>
-        <li class="divider blue-grey"></li>
-        <li class="blue darken-4">
-            <a class="white-text" href="#!" onclick="selectLang('Hindi')">Hindi</a>
-        </li>
-        <li class="divider blue-grey"></li>
-        <li class="blue darken-4">
-            <a class="white-text" href="#!" onclick="selectLang('Spanish')">Spanish</a>
-        </li>
-    </ul> -->
-
-    <!-- Mobile or Tablet Menu -->
-    <ul class="sidenav blue darken-4 no-copy" id="mobile-nav">
-        <li>
-            <a class="white-text" href="index.html">Home</a>
-        </li>
-        <li>
-            <a class="white-text" href="colors.html">Colors</a>
-        </li>
-        <li class="active">
-            <a class="white-text" href="shapes.html">Shapes</a>
-        </li>
-        <li>
-            <a class="white-text" href="alphabets.html">Alphabets</a>
-        </li>
-        <li>
-            <a class="white-text" href="numbers.html">Numbers</a>
-        </li>
-        <li>
-            <a class="white-text" href="words.html">Words</a>
-        </li>
-    </ul>
-
-
-    <div style="height:60px;"></div>
-
-
-    <div class="carousel carousel-slider center no-copy">
-        <div class="carousel-fixed-item center blue-grey-text text-darken-4">
-            <div class="left" onclick="carouselPrev()">
-                <i class="material-icons md-48">keyboard_arrow_left</i>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Square')" on-touch="responsiveVoice.speak('Square')">
+                <svg width="200" height="200">
+                    <rect x="25" y="25" width="150" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
+                </svg>
+                <h4 id="squareSlide">Square</h4>
             </div>
-            <i class="material-icons md-48">touch_app</i>
-            <div class="right" onclick="carouselNext()">
-                <i class="material-icons md-48">keyboard_arrow_right</i>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Circle')" on-touch="responsiveVoice.speak('Circle')">
+                <svg height="200" width="200">
+                    <circle cx="100" cy="100" r="80" stroke="darkblue" stroke-width="2" fill="cyan" /> Sorry, your browser does not support inline SVG.
+                </svg>
+                <h4 id="circleSlide">Circle</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Rectangle')" on-touch="responsiveVoice.speak('Rectangle')">
+                <svg width="300" height="200">
+                    <rect x="25" y="25" width="250" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
+                </svg>
+                <h4 id="rectangleSlide">Rectangle</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Triangle')" on-touch="responsiveVoice.speak('Triangle')">
+                <svg height="200" width="200">
+                    <polygon points="100,20 10,190 190,190" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
+                </svg>
+                <h4 id="triangleSlide">Triangle</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Star')" on-touch="responsiveVoice.speak('Star')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m6.5275,83.57595l71.42815,0l22.07185,-67.2262l22.07186,67.2262l71.42814,0l-57.78648,41.5476l22.07299,67.2262l-57.78651,-41.54873l-57.78649,41.54873l22.073,-67.2262l-57.7865,-41.5476z"
+                        stroke-width="2" fill="cyan" />
+                </svg>
+                <h4 id="starSlide">Star</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Diamond')" on-touch="responsiveVoice.speak('Diamond')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m18.5025,99.96749l81,-84.49999l81,84.49999l-81,84.49999l-81,-84.49999z" stroke-width="2" fill="cyan"
+                    />
+                </svg>
+                <h4 id="diamondSlide">Diamond</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Pentagon')" on-touch="responsiveVoice.speak('Pentagon')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m12.4975,81.70257l85.9999,-63.78816l86.00011,63.78816l-32.84897,103.21185l-106.30197,0l-32.84907,-103.21185z"
+                        stroke-width="2" fill="cyan" />
+                </svg>
+                <h4 id="pentagonSlide">Pentagon</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Oval')" on-touch="responsiveVoice.speak('Oval')">
+                <svg height="200" width="200">
+                    <ellipse stroke="darkblue" ry="59" rx="88.5" cy="101.5" cx="100" fill-opacity="null" stroke-opacity="null" stroke-width="2"
+                        fill="cyan" />
+                </svg>
+                <h4 id="ovalSlide">Oval</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Hexagon')" on-touch="responsiveVoice.speak('Hexagon')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m7.78749,100.49894l39.64286,-82l105.7143,0l39.64285,82l-39.64285,82l-105.7143,0l-39.64286,-82z"
+                        stroke-width="2" fill="cyan" />
+                </svg>
+                <h4 id="hexagonSlide">Hexagon</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Heart')" on-touch="responsiveVoice.speak('Heart')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m100.02275,66.60789c36.28198,-91.55081 178.43595,0 0,117.70818c-178.43595,-117.70818 -36.28198,-209.25898 0,-117.70818z"
+                        stroke-width="2" fill="cyan" />
+                </svg>
+                <h4 id="heartSlide">Heart</h4>
+            </div>
+            <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Octagon')" on-touch="responsiveVoice.speak('Octagon')">
+                <svg height="200" width="200">
+                    <path stroke="darkblue" d="m23.23749,69.23993l45.39822,-44.81243l64.20358,0l45.39822,44.81243l0,63.37515l-45.39822,44.81243l-64.20358,0l-45.39822,-44.81243l0,-63.37515z"
+                        stroke-width="2" fill="cyan" />
+                </svg>
+                <h4 id="octagonSlide">Octagon</h4>
             </div>
         </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Square')" on-touch="responsiveVoice.speak('Square')">
-            <svg width="200" height="200">
-                <rect x="25" y="25" width="150" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
-            </svg>
-            <h4 id="squareSlide">Square</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Circle')" on-touch="responsiveVoice.speak('Circle')">
-            <svg height="200" width="200">
-                <circle cx="100" cy="100" r="80" stroke="darkblue" stroke-width="2" fill="cyan" /> Sorry, your browser does not support inline SVG.
-            </svg>
-            <h4 id="circleSlide">Circle</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Rectangle')" on-touch="responsiveVoice.speak('Rectangle')">
-            <svg width="300" height="200">
-                <rect x="25" y="25" width="250" height="150" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
-            </svg>
-            <h4 id="rectangleSlide">Rectangle</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Triangle')" on-touch="responsiveVoice.speak('Triangle')">
-            <svg height="200" width="200">
-                <polygon points="100,20 10,190 190,190" style="fill:cyan;stroke:darkblue;stroke-width:2;opacity:0.9" /> Sorry, your browser does not support inline SVG.
-            </svg>
-            <h4 id="triangleSlide">Triangle</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Star')" on-touch="responsiveVoice.speak('Star')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m6.5275,83.57595l71.42815,0l22.07185,-67.2262l22.07186,67.2262l71.42814,0l-57.78648,41.5476l22.07299,67.2262l-57.78651,-41.54873l-57.78649,41.54873l22.073,-67.2262l-57.7865,-41.5476z"
-                    stroke-width="2" fill="cyan" />
-            </svg>
-            <h4 id="starSlide">Star</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Diamond')" on-touch="responsiveVoice.speak('Diamond')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m18.5025,99.96749l81,-84.49999l81,84.49999l-81,84.49999l-81,-84.49999z" stroke-width="2" fill="cyan"
-                />
-            </svg>
-            <h4 id="diamondSlide">Diamond</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Pentagon')" on-touch="responsiveVoice.speak('Pentagon')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m12.4975,81.70257l85.9999,-63.78816l86.00011,63.78816l-32.84897,103.21185l-106.30197,0l-32.84907,-103.21185z"
-                    stroke-width="2" fill="cyan" />
-            </svg>
-            <h4 id="pentagonSlide">Pentagon</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Oval')" on-touch="responsiveVoice.speak('Oval')">
-            <svg height="200" width="200">
-                <ellipse stroke="darkblue" ry="59" rx="88.5" cy="101.5" cx="100" fill-opacity="null" stroke-opacity="null" stroke-width="2"
-                    fill="cyan" />
-            </svg>
-            <h4 id="ovalSlide">Oval</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Hexagon')" on-touch="responsiveVoice.speak('Hexagon')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m7.78749,100.49894l39.64286,-82l105.7143,0l39.64285,82l-39.64285,82l-105.7143,0l-39.64286,-82z"
-                    stroke-width="2" fill="cyan" />
-            </svg>
-            <h4 id="hexagonSlide">Hexagon</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Heart')" on-touch="responsiveVoice.speak('Heart')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m100.02275,66.60789c36.28198,-91.55081 178.43595,0 0,117.70818c-178.43595,-117.70818 -36.28198,-209.25898 0,-117.70818z"
-                    stroke-width="2" fill="cyan" />
-            </svg>
-            <h4 id="heartSlide">Heart</h4>
-        </div>
-        <div class="carousel-item cyan lighten-4 teal-text" onclick="responsiveVoice.speak('Octagon')" on-touch="responsiveVoice.speak('Octagon')">
-            <svg height="200" width="200">
-                <path stroke="darkblue" d="m23.23749,69.23993l45.39822,-44.81243l64.20358,0l45.39822,44.81243l0,63.37515l-45.39822,44.81243l-64.20358,0l-45.39822,-44.81243l0,-63.37515z"
-                    stroke-width="2" fill="cyan" />
-            </svg>
-            <h4 id="octagonSlide">Octagon</h4>
-        </div>
-    </div>
 
 
-    <div class="valign-wrapper blue-grey lighten-5">
-        <span style="width:20px;"></span>
-        <i class="material-icons">volume_up</i>&nbsp;&nbsp;
-        <em>Click or Tap on the shape for audio (English Only)</em>
-        </span>
-    </div>
+        <div class="valign-wrapper blue-grey lighten-5">
+            <span style="width:20px;"></span>
+            <i class="material-icons">volume_up</i>&nbsp;&nbsp;
+            <em>Click or Tap on the shape for audio (English Only)</em>
+            </span>
+        </div>
 
+    </main>
 
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <!-- Share Buttons-->
+            <h5 class="white-text center-align">Share</h5>
+            <ul class="share-buttons center-align">
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbabybook.netlify.com%2F&quote=" title="Share on Facebook"
+                        target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Share on Facebook" src="images/icons/social_icons/facebook.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fbabybook.netlify.com%2F&text=:%20https%3A%2F%2Fbabybook.netlify.com%2F"
+                        target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Tweet" src="images/icons/social_icons/twitter.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/share?url=https%3A%2F%2Fbabybook.netlify.com%2F" target="_blank" title="Share on Google+"
+                        onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Share on Google+" src="images/icons/social_icons/googleplus.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fbabybook.netlify.com%2F&quote=&s=" target="_blank" title="Post to Tumblr"
+                        onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&quote=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Post to Tumblr" src="images/icons/social_icons/tumblr.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fbabybook.netlify.com%2F&description=" target="_blank"
+                        title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Pin it" src="images/icons/social_icons/pinterest.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://getpocket.com/save?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=" target="_blank" title="Add to Pocket"
+                        onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Add to Pocket" src="images/icons/social_icons/pocket.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=" target="_blank" title="Submit to Reddit"
+                        onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Submit to Reddit" src="images/icons/social_icons/reddit.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbabybook.netlify.com%2F&title=&summary=&source=https%3A%2F%2Fbabybook.netlify.com%2F"
+                        target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Share on LinkedIn" src="images/icons/social_icons/linkedin.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://pinboard.in/popup_login/?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=&description=" target="_blank"
+                        title="Save to Pinboard" onclick="window.open('https://pinboard.in/popup_login/?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Save to Pinboard" src="images/icons/social_icons/pinboard.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:?subject=&body=:%20https%3A%2F%2Fbabybook.netlify.com%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Send email" src="images/icons/social_icons/email.svg" />
+                    </a>
+                </li>
+            </ul>
+
+            <div class="row center-align">
+                <div class="col l6 m6 s12">
+                    <h5 class="white-text">About</h5>
+                    <p class="grey-text text-lighten-4">Made with
+                        <i class="material-icons red-text md-14">favorite</i>
+                        for Kian &amp; his friends,
+                        <br />by Suman K Jana (Kian's Papa).</p>
+                </div>
+                <div class="col l6 m6 s12">
+                    <h5 class="white-text">Contact</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="mailto:suman.janaATgmailDOTcom" onclick="this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">
+                                <i class="material-icons md-14">email</i> &nbsp; suman.jana
+                                <span class="email-domain">gmail</span>com
+                            </a>
+                        </li>
+                        <li>
+                            <div class="grey-text text-lighten-3">
+                                <i class="material-icons md-14">phone</i> &nbsp;
+                                <span class="reverse"> 5591-104 (286) 1+ </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                Copyright ©
+                <script>document.write(new Date().getFullYear())</script> Baby Book. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
