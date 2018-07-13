@@ -2,21 +2,40 @@
 <html>
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99981678-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99981678-2');
+    </script>
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Book - Numbers</title>
+
 </head>
 
 <body>
+
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
 
     <script lang="JavaScript">
 
         //M.AutoInit();
+
+        let carouselInstance;
+        let numberCount = 1;
 
         document.addEventListener('DOMContentLoaded', function () {
             let Options;
@@ -24,81 +43,238 @@
             let sideNavElems = document.querySelectorAll('.sidenav');
             let sideNavInstance = M.Sidenav.init(sideNavElems, Options);
 
-            let tabElems = document.querySelectorAll('.tabs');
-            let tabInstance = M.Tabs.init(tabElems, Options);
+            let carouselElems = document.querySelector('.carousel');
+            carouselInstance = M.Carousel.init(carouselElems, {
+                fullWidth: true
+            });
         });
+
+        function actionOnClick() {
+            responsiveVoice.speak('' + numberCount);
+        }
+
+        function numberUp() {
+            if (numberCount < 100) {
+                numberCount++;
+            } else {
+                numberCount = 1;
+            }
+            document.getElementById("numberSlide").innerText = numberCount;
+        }
+
+        function numberDown() {
+            if (numberCount > 1) {
+                numberCount--;
+            } else {
+                numberCount = 100;
+            }
+            document.getElementById("numberSlide").innerText = numberCount;
+        }
 
     </script>
 
-    <!-- <nav class="nav-extended blue darken-4"> -->
-    <nav class="nav-wrapper blue darken-4">
-        <a href="#" class="brand-logo">
-            <span style="margin-left: 20px;"></span>
-            <img src="images/icons/android-chrome-512x512.png" height="46px" style="vertical-align: middle;" />
-            <span class="flow-text">&nbsp;Baby Book&nbsp;</span>
-        </a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+    <header>
+
+        <div class="navbar-fixed">
+            <nav class="nav-extended blue darken-4">
+                <div class="nav-wrapper no-copy">
+                    <a href="index.html" class="brand-logo">
+                        <span style="margin-left: 20px;"></span>
+                        <img src="images/icons/android-chrome-512x512.png" height="46px" style="vertical-align: middle;" />
+                        <span class="flow-text">&nbsp;Baby Book&nbsp;</span>
+                    </a>
+                    <a href="index.html" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="colors.html">Colors</a>
+                        </li>
+                        <li>
+                            <a href="shapes.html">Shapes</a>
+                        </li>
+                        <li>
+                            <a href="alphabets.html">Alphabets</a>
+                        </li>
+                        <li class="active">
+                            <a href="numbers.html">Numbers</a>
+                        </li>
+                        <li>
+                            <a href="words.html">Words</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="divider blue-grey" style="margin-left: 20px; margin-right: 20px;"></div>
+                <div class="nav-wrapper blue darken-4 no-copy">
+                    <div class="col s12 m12 l12 xl12">
+                        <span style="margin-left: 20px;">
+                            <a href="index.html" class="breadcrumb">Home</a>
+                            <a href="#" class="breadcrumb">Numbers</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile or Tablet Menu -->
+        <ul class="sidenav blue darken-4 no-copy" id="mobile-nav">
             <li>
-                <a href="index.html">Home</a>
+                <a class="white-text" href="index.html">Home</a>
             </li>
             <li>
-                <a href="colors.html">Colors</a>
+                <a class="white-text" href="colors.html">Colors</a>
             </li>
             <li>
-                <a href="shapes.html">Shapes</a>
+                <a class="white-text" href="shapes.html">Shapes</a>
             </li>
             <li>
-                <a href="alphabets.html">Alphabets</a>
+                <a class="white-text" href="alphabets.html">Alphabets</a>
             </li>
             <li class="active">
-                <a href="numbers.html">Numbers</a>
+                <a class="white-text" href="numbers.html">Numbers</a>
             </li>
             <li>
-                <a href="words.html">Words</a>
+                <a class="white-text" href="words.html">Words</a>
             </li>
         </ul>
-    </nav>
-    <!-- <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab">
-                    <a class="active" href="#test1">Dashboard</a>
+
+    </header>
+
+    <main>
+
+        <div style="height:65px;"></div>
+
+        <div class="center-align">
+            <div class="valign-wrapper blue-grey lighten-5 no-copy">
+                <span style="width:30px;"></span>
+                <i class="material-icons">volume_up</i>&nbsp;&nbsp;
+                <em>Click or Tap on the letter for audio (English Only)</em>
+                </span>
+            </div>
+        </div>
+
+        <div class="carousel carousel-slider center no-copy" style="height:500px;">
+            <div class="carousel-fixed-item center black-text">
+                <div class="left" onclick="numberDown()">
+                    <i class="material-icons md-48">keyboard_arrow_left</i>
+                </div>
+                <i class="material-icons md-48">touch_app</i>
+                <div class="right" onclick="numberUp()">
+                    <i class="material-icons md-48">keyboard_arrow_right</i>
+                </div>
+            </div>
+            <div class="carousel-item amber lighten-3 red-text" onclick="actionOnClick()" on-touch="actionOnClick()">
+                <h1 id="numberSlide" style="font-size: 220px;">1</h1>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <!-- Share Buttons-->
+            <h5 class="white-text center-align">Share</h5>
+            <ul class="share-buttons center-align">
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbabybook.netlify.com%2F&quote=" title="Share on Facebook"
+                        target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Share on Facebook" src="images/icons/social_icons/facebook.svg" />
+                    </a>
                 </li>
-                <li class="tab">
-                    <a href="#test2">View All Inventory</a>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fbabybook.netlify.com%2F&text=:%20https%3A%2F%2Fbabybook.netlify.com%2F"
+                        target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Tweet" src="images/icons/social_icons/twitter.svg" />
+                    </a>
                 </li>
-                <li class="tab">
-                    <a href="#test3">Search Asset</a>
+                <li>
+                    <a href="https://plus.google.com/share?url=https%3A%2F%2Fbabybook.netlify.com%2F" target="_blank" title="Share on Google+"
+                        onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Share on Google+" src="images/icons/social_icons/googleplus.svg" />
+                    </a>
                 </li>
-                <li class="tab">
-                    <a href="#test4">Manage Page</a>
+                <li>
+                    <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fbabybook.netlify.com%2F&quote=&s=" target="_blank" title="Post to Tumblr"
+                        onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&quote=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Post to Tumblr" src="images/icons/social_icons/tumblr.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fbabybook.netlify.com%2F&description=" target="_blank"
+                        title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Pin it" src="images/icons/social_icons/pinterest.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://getpocket.com/save?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=" target="_blank" title="Add to Pocket"
+                        onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Add to Pocket" src="images/icons/social_icons/pocket.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=" target="_blank" title="Submit to Reddit"
+                        onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Submit to Reddit" src="images/icons/social_icons/reddit.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbabybook.netlify.com%2F&title=&summary=&source=https%3A%2F%2Fbabybook.netlify.com%2F"
+                        target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Share on LinkedIn" src="images/icons/social_icons/linkedin.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://pinboard.in/popup_login/?url=https%3A%2F%2Fbabybook.netlify.com%2F&title=&description=" target="_blank"
+                        title="Save to Pinboard" onclick="window.open('https://pinboard.in/popup_login/?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                        <img class="social-svg-icon" alt="Save to Pinboard" src="images/icons/social_icons/pinboard.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:?subject=&body=:%20https%3A%2F%2Fbabybook.netlify.com%2F" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;">
+                        <img class="social-svg-icon" alt="Send email" src="images/icons/social_icons/email.svg" />
+                    </a>
                 </li>
             </ul>
-        </div> 
-    </nav> -->
 
-    <ul class="sidenav blue darken-4" id="mobile-nav">
-        <li>
-            <a class="white-text" href="index.html">Home</a>
-        </li>
-        <li>
-            <a class="white-text" href="colors.html">Colors</a>
-        </li>
-        <li>
-            <a class="white-text" href="shapes.html">Shapes</a>
-        </li>
-        <li>
-            <a class="white-text" href="alphabets.html">Alphabets</a>
-        </li>
-        <li class="active">
-            <a class="white-text" href="numbers.html">Numbers</a>
-        </li>
-        <li>
-            <a class="white-text" href="words.html">Words</a>
-        </li>
-    </ul>
+            <div class="row center-align">
+                <div class="col l6 m6 s12">
+                    <h5 class="white-text">About</h5>
+                    <p class="grey-text text-lighten-4">Made with
+                        <i class="material-icons red-text md-14">favorite</i>
+                        for Kian &amp; his friends,
+                        <br />by Suman K Jana (Kian's Papa).</p>
+                </div>
+                <div class="col l6 m6 s12">
+                    <h5 class="white-text">Contact</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="mailto:suman.janaATgmailDOTcom" onclick="this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">
+                                <i class="material-icons md-14">email</i> &nbsp; suman.jana
+                                <span class="email-domain">gmail</span>com
+                            </a>
+                        </li>
+                        <li>
+                            <div class="grey-text text-lighten-3">
+                                <i class="material-icons md-14">phone</i> &nbsp;
+                                <span class="reverse"> 5591-104 (286) 1+ </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                Copyright ©
+                <script>document.write(new Date().getFullYear())</script> Baby Book. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
 
 
