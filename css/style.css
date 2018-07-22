@@ -18,6 +18,10 @@
     font-size: 48px;
 }
 
+.material-icons.md-64 {
+  font-size: 64px;
+}
+
 .no-copy {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
